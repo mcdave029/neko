@@ -25,17 +25,20 @@ jobs:
         with:
           node_version: ${{ matrix.node_version }}
 
-      - name: Installation
+      - name: Installation ⚙️
         run: yarn install
 
-      - name: Linting
+      - name: Linting 🧹
         run: yarn lint
 
-      - name: Testing
+      - name: Testing 🧪
         run: yarn test --watchAll=false
+
+      - name: Build 🛠
+        run: yarn build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages
-          folder: "./build"
+          folder: build
