@@ -19,8 +19,9 @@ function App() {
             <Form>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label>Breed</Form.Label>
-                <Form.Control as="select" custom>
-                  <option disabled selected>Select breed</option>
+                <Form.Control as="select" custom defaultValue={ 'DEFAULT' }>
+                  <option value="DEFAULT" disabled>Select breed</option>
+                  <option value="foo">foo</option>
                 </Form.Control>
               </Form.Group>
             </Form>
