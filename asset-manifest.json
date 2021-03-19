@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc00656c.chunk.css",
-    "main.js": "/static/js/main.b167d0b1.chunk.js",
-    "main.js.map": "/static/js/main.b167d0b1.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b0613b4c.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b0613b4c.js.map",
-    "static/js/2.c3e39c08.chunk.js": "/static/js/2.c3e39c08.chunk.js",
-    "static/js/2.c3e39c08.chunk.js.map": "/static/js/2.c3e39c08.chunk.js.map",
-    "static/js/3.043673a8.chunk.js": "/static/js/3.043673a8.chunk.js",
-    "static/js/3.043673a8.chunk.js.map": "/static/js/3.043673a8.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.cc00656c.chunk.css.map": "/static/css/main.cc00656c.chunk.css.map",
-    "static/js/2.c3e39c08.chunk.js.LICENSE.txt": "/static/js/2.c3e39c08.chunk.js.LICENSE.txt"
+    "main.css": "/neko/static/css/main.cc00656c.chunk.css",
+    "main.js": "/neko/static/js/main.1770e35a.chunk.js",
+    "main.js.map": "/neko/static/js/main.1770e35a.chunk.js.map",
+    "runtime-main.js": "/neko/static/js/runtime-main.99743fe3.js",
+    "runtime-main.js.map": "/neko/static/js/runtime-main.99743fe3.js.map",
+    "static/js/2.c3e39c08.chunk.js": "/neko/static/js/2.c3e39c08.chunk.js",
+    "static/js/2.c3e39c08.chunk.js.map": "/neko/static/js/2.c3e39c08.chunk.js.map",
+    "static/js/3.043673a8.chunk.js": "/neko/static/js/3.043673a8.chunk.js",
+    "static/js/3.043673a8.chunk.js.map": "/neko/static/js/3.043673a8.chunk.js.map",
+    "index.html": "/neko/index.html",
+    "static/css/main.cc00656c.chunk.css.map": "/neko/static/css/main.cc00656c.chunk.css.map",
+    "static/js/2.c3e39c08.chunk.js.LICENSE.txt": "/neko/static/js/2.c3e39c08.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b0613b4c.js",
+    "static/js/runtime-main.99743fe3.js",
     "static/js/2.c3e39c08.chunk.js",
     "static/css/main.cc00656c.chunk.css",
-    "static/js/main.b167d0b1.chunk.js"
+    "static/js/main.1770e35a.chunk.js"
   ]
 }
