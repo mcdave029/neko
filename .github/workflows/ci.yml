@@ -35,7 +35,10 @@ jobs:
         run: yarn test --watchAll=false
 
       - name: Build 🛠
-        run: yarn build
+        run: |
+          yarn build
+          echo ${{ secrets.REACT_APP_CAT_API_KEY }}
+          echo $REACT_APP_CAT_API_KEY
         env:
           REACT_APP_CAT_API_KEY: ${{ secrets.REACT_APP_CAT_API_KEY }}
 
