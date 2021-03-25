@@ -62,7 +62,7 @@ class Index extends Component<Props> {
     return (
       <Container>
         <Row>
-          <Col><h1>Cat Browser { this.props.loading ? "TRUE" : "FALSE"}</h1></Col>
+          <Col><h1>Cat Browser</h1></Col>
         </Row>
         <Row>
           <Col md={{ span: 3 }} sm={{ span: 6 }}>
