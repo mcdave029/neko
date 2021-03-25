@@ -18,6 +18,7 @@ export default class ActionRow extends Component<Props> {
             variant="success"
             disabled={this.props.isLoading || this.props.isDisabled}
             onClick={this.props.wasClicked}
+            className="mt-3"
           >
             {this.props.isLoading ? 'Loading cats…' : 'Load more'}
           </Button>{' '}

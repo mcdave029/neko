@@ -12,7 +12,7 @@ export default class CatImage extends Component<Props> {
   render() {
     return (
       <Col md={{ span: 3 }} sm={{ span: 6}}>
-        <Card style={{ width: '18rem' }}>
+        <Card className="mb-3">
           <Card.Img variant="top" src={this.props.catDetails.url} />
           <Card.Body>
             <Link to={ "/" + this.props.catDetails.id } className="btn btn-primary btn-block">View details</Link>

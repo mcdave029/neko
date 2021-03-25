@@ -14,7 +14,7 @@ export default class SelectionForm extends Component<Props> {
       <Form>
         <Form.Group controlId="breedSelection">
           <Form.Label>Breed</Form.Label>
-          <Form.Control as="select" custom onChange={this.props.wasChanged} value={ this.props.selectedBreed}>
+          <Form.Control as="select" custom onChange={this.props.wasChanged} value={ this.props.selectedBreed} disabled={this.props.breeds.length === 0}>
             <option value="DEFAULT" disabled>Select breed</option>
             {this.props.breeds.map((breed: Breed) => (
               <option key={breed.id} value={breed.id}>{breed.name}</option>
