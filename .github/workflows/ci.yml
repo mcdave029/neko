@@ -36,6 +36,8 @@ jobs:
 
       - name: Build 🛠
         run: yarn build
+        env:
+          REACT_APP_CAT_API_KEY: ${{ secrets.REACT_APP_CAT_API_KEY }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
