@@ -15,7 +15,7 @@ export default class CatImage extends Component<Props> {
         <Card className="mb-3">
           <Card.Img variant="top" src={this.props.catDetails.url} />
           <Card.Body>
-            <Link to={ "/" + this.props.catDetails.id } className="btn btn-primary btn-block">View details</Link>
+            <Link to={ "/neko/" + this.props.catDetails.id } className="btn btn-primary btn-block">View details</Link>
           </Card.Body>
         </Card>
       </Col>

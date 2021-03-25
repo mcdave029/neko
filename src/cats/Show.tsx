@@ -30,9 +30,9 @@ class Show extends Component<Props, State> {
     return (
       <Container>
         { (this.state?.catDetails != null) ?
-        <Card>
+        <Card className="mt-3 mb-3">
           <Card.Header>
-            <Link to="/" className="btn btn-primary">Back</Link>
+            <Link to="/neko" className="btn btn-primary">Back</Link>
           </Card.Header>
           <Card.Img variant="top" src={ this.state?.catDetails?.url } />
           <Card.Body>

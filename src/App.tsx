@@ -14,8 +14,8 @@ export default class App extends Component {
       <div className="App">
         <Router>
           <Switch>
-            <Route exact path="/" component={Index} />
-            <Route path="/:id" component={Show} />
+            <Route exact path="/neko" component={Index} />
+            <Route path="/neko/:id" component={Show} />
           </Switch>
         </Router>
       </div>
