@@ -7,6 +7,7 @@ import { RootState } from "../redux/store";
 import { CatDetails } from "../interfaces";
 import { connect } from "react-redux";
 import axios from "axios";
+import Alert from "react-bootstrap/Alert";
 
 interface Props {
   match: {
@@ -17,6 +18,7 @@ interface Props {
 
 interface State {
   catDetails?: CatDetails;
+  hasError: boolean;
 }
 
 const mapStateToProps = (state: RootState) => {
@@ -26,6 +28,12 @@ const mapStateToProps = (state: RootState) => {
 };
 
 class Show extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      hasError: false,
+    };
+  }
   render() {
     return (
       <Container>
@@ -49,6 +57,22 @@ class Show extends Component<Props, State> {
         ) : (
           <h3 className="center-fixed">Loading...</h3>
         )}
+        {this.state.hasError && (
+          <Alert
+            variant="danger"
+            className="mt-3"
+            onClose={() => this.setState({ hasError: false })}
+            dismissible
+          >
+            Apologies but we could not load new cats for you at this time! Miau!
+            <hr />
+            <div className="d-flex justify-content-end">
+              <Link to="/neko" className="btn btn-outline-danger">
+                Back
+              </Link>
+            </div>
+          </Alert>
+        )}
       </Container>
     );
   }
@@ -65,7 +89,7 @@ class Show extends Component<Props, State> {
         this.setState({ catDetails: response.data });
       })
       .catch((error) => {
-        console.log(error.message);
+        this.setState({ hasError: true });
       });
   }
 

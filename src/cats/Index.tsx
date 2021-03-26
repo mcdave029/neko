@@ -11,15 +11,17 @@ import {
   selectedBreedChange,
   fetchBreeds,
   fetchCats,
+  clearError,
 } from "../redux";
 import { connect } from "react-redux";
 import { RootState } from "../redux/store";
+import Alert from "react-bootstrap/Alert";
 
 interface Props {
   loading: boolean;
   breeds: Breed[];
   cats: CatDetails[];
-  error: string;
+  hasError: boolean;
   selectedBreed: string;
   paginationPage: number;
   canLoadMore: boolean;
@@ -27,6 +29,7 @@ interface Props {
   selectedBreedChange: () => void;
   fetchBreeds: () => void;
   fetchCats: (breed_id: string, page: number) => void;
+  clearError: () => void;
 }
 
 const mapStateToProps = (state: RootState) => {
@@ -34,8 +37,7 @@ const mapStateToProps = (state: RootState) => {
     loading: state.breed.loading || state.cat.loading,
     breeds: state.breed.breeds,
     cats: state.cat.cats,
-    breedError: state.breed.error,
-    catError: state.cat.error,
+    hasError: state.breed.error.length !== 0 || state.cat.error.length !== 0,
     selectedBreed: state.breed.selectedBreed,
     paginationPage: state.cat.paginationPage,
     canLoadMore: state.cat.canLoadMore,
@@ -49,6 +51,7 @@ const mapDispatchToProps = (dispatch: any) => {
     fetchBreeds: () => dispatch(fetchBreeds()),
     fetchCats: (breed_id: string, page: number) =>
       dispatch(fetchCats(breed_id, page)),
+    clearError: () => dispatch(clearError()),
   };
 };
 
@@ -76,6 +79,20 @@ class Index extends Component<Props> {
             />
           </Col>
         </Row>
+        {this.props.hasError && (
+          <Row>
+            <Col>
+              <Alert
+                variant="danger"
+                onClose={() => this.props.clearError()}
+                dismissible
+              >
+                Apologies but we could not load new cats for you at this time!
+                Miau!
+              </Alert>
+            </Col>
+          </Row>
+        )}
         <Row>
           {this.props.cats.length > 0 ? (
             this.props.cats.map((cat: CatDetails) => (
